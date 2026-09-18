@@ -17,132 +17,273 @@
   h1 { font-size: 1.8rem; margin-bottom: 4px; }
   h2 { font-size: 1.3rem; margin-top: 2.2rem; border-bottom: 2px solid #d4af37; padding-bottom: 6px; }
   .meta { color: #666; font-size: 0.9rem; margin-bottom: 2rem; }
+  .lang { font-size: 0.9rem; margin-bottom: 1.5rem; }
   table { width: 100%; border-collapse: collapse; margin: 1rem 0; font-size: 0.92rem; }
   th, td { border: 1px solid #ddd; padding: 10px 12px; text-align: left; vertical-align: top; }
   th { background: #faf6ea; }
   .provider { background: #f7f7f7; border-left: 3px solid #d4af37; padding: 12px 16px; margin: 12px 0; border-radius: 4px; }
   .provider strong { display: block; margin-bottom: 4px; }
-  a { color: #8a6d00; }
+  a { color: #8a6d00; overflow-wrap: anywhere; }
   ul { padding-left: 1.3rem; }
+  hr { border: 0; border-top: 2px solid #eee; margin: 3.5rem 0; }
+  @media (max-width: 600px) { table { font-size: 0.85rem; } th, td { padding: 8px; } }
 </style>
 </head>
 <body>
 
+<p class="lang"><a href="#es">Español</a> · <a href="#en">English</a></p>
+
+<section id="es">
 <h1>Política de Privacidad</h1>
-<p class="meta">Quantix Labs — App "Oráculo Pitagórico" (Android)<br>
-Última actualización: 11 de agosto de 2026</p>
+<p class="meta">Vectrix Labs — App "Oráculo Pitagórico" (Android, com.quantixlabs.oraculo)<br>
+Última actualización: 17 de septiembre de 2026</p>
 
 <h2>1. Introducción</h2>
-<p>Quantix Labs ("nosotros") desarrolla la aplicación Oráculo Pitagórico, una app de entretenimiento de numerología pitagórica con orientación astrológica y un "Oráculo" impulsado por inteligencia artificial. Esta política explica qué datos procesa la app, con qué fin, y cómo protegemos tu privacidad, en línea con el Reglamento General de Protección de Datos (RGPD/GDPR) y las leyes de protección de datos locales aplicables.</p>
-<p>Oráculo Pitagórico no requiere registro ni cuenta de usuario. La app funciona con datos ingresados voluntariamente por vos para generar tu perfil numerológico, y no vendemos tus datos a terceros bajo ninguna circunstancia.</p>
+<p>Vectrix Labs ("nosotros") desarrolla Oráculo Pitagórico, una app de entretenimiento de numerología pitagórica, astrología simbólica, carta diaria, meditación guiada y un "Oráculo" cuyos mensajes se generan con inteligencia artificial. Esta política explica qué datos procesa la app, con qué fin, con quién se comparten y qué opciones tienes, en línea con el Reglamento General de Protección de Datos (RGPD) y las leyes de protección de datos aplicables.</p>
+<p>La app no requiere registro ni cuenta de usuario y no tenemos servidores propios que guarden tus datos. No vendemos tus datos personales.</p>
+<p>Los contenidos de la app, incluidos los mensajes del Oráculo, son de entretenimiento simbólico y no constituyen consejo médico, psicológico, financiero ni legal.</p>
 
-<h2>2. Datos que procesamos</h2>
+<h2>2. Datos que procesa la app</h2>
 <table>
-  <tr><th>Dato</th><th>Finalidad</th><th>Dónde se guarda</th><th>¿Se comparte con terceros?</th></tr>
+  <tr><th>Dato</th><th>Para qué se usa</th><th>Dónde se guarda</th><th>¿Sale del dispositivo?</th></tr>
   <tr>
-    <td>Nombre completo, fecha, hora y ciudad de nacimiento</td>
-    <td>Calcular tu perfil numerológico, astrológico y las lecturas del Oráculo</td>
-    <td>Únicamente en el almacenamiento local de tu dispositivo (no en un servidor propio)</td>
-    <td>Sí, solo si consultás al Oráculo IA (ver sección 5) o pedís la ubicación de tu ciudad natal</td>
+    <td>Nombre, fecha y hora de nacimiento y ciudad de nacimiento que ingresas</td>
+    <td>Calcular tu perfil numerológico y astrológico, la carta diaria, la compatibilidad y el PDF</td>
+    <td>Solo en tu dispositivo</td>
+    <td>En parte: ver las secciones 3 (Oráculo) y 4 (clima histórico, efemérides y ciudades)</td>
   </tr>
   <tr>
-    <td>Ubicación (GPS), opcional</td>
-    <td>Autocompletar el nombre de tu ciudad de nacimiento al tocar el ícono de ubicación</td>
-    <td>No se guarda; se usa solo en el momento del pedido</td>
-    <td>Sí, se envía a un servicio de geocodificación (Open-Meteo) para resolver el nombre de la ciudad</td>
+    <td>Datos de otra persona en la función Compatibilidad (nombre, fecha y hora de nacimiento, ciudad)</td>
+    <td>Calcular la compatibilidad. Ingrésalos solo con el permiso de esa persona</td>
+    <td>En tu dispositivo</td>
+    <td>Solo el texto de la ciudad, para sugerir ciudades (Open-Meteo, sección 4)</td>
   </tr>
   <tr>
-    <td>Consultas y respuestas del Oráculo IA</td>
-    <td>Generar y, si guardaste el perfil, conservar el historial de lecturas del Oráculo</td>
-    <td>Almacenamiento local del dispositivo</td>
-    <td>La consulta (nombre, camino de vida, vibración diaria, signo, fase lunar) se envía a la API de Gemini de Google para generar la respuesta</td>
+    <td>Ubicación del dispositivo, aproximada o precisa (opcional)</td>
+    <td>Completar la ciudad cuando tocas el botón de ubicación. Solo se usa si concedes el permiso de ubicación</td>
+    <td>No se guarda</td>
+    <td>Puede salir: ver la sección 4</td>
   </tr>
   <tr>
-    <td>Trazos de escritura a mano (función Grafología)</td>
-    <td>Analizar rasgos de personalidad a partir de cómo escribís una frase fija en pantalla (nunca tu firma real)</td>
-    <td>Nunca se guardan — el trazo se descarta apenas se calcula el resultado; solo se guarda el resultado del análisis (texto), no el dibujo</td>
+    <td>Mensajes del Oráculo recibidos</td>
+    <td>Mostrar tu historial de consultas por perfil</td>
+    <td>Solo en tu dispositivo</td>
+    <td>No, salvo que decidas reportar una respuesta (sección 6)</td>
+  </tr>
+  <tr>
+    <td>Trazos de escritura (función de grafología)</td>
+    <td>Calcular rasgos simbólicos de tu escritura</td>
+    <td>El trazo no se guarda; solo se guarda el resultado en texto</td>
     <td>No</td>
   </tr>
   <tr>
-    <td>Estado de suscripción</td>
-    <td>Habilitar funciones ilimitadas (Oráculo sin límite diario, exportación de PDF sin límite)</td>
-    <td>Gestionado enteramente por Google Play Billing; la app solo recibe si tenés una suscripción activa o no</td>
-    <td>Sí, Google Play Billing procesa el pago — la app nunca ve tus datos de tarjeta/pago</td>
+    <td>PDF de tu perfil</td>
+    <td>Generar un documento para que lo guardes o compartas</td>
+    <td>Carpeta temporal de la app</td>
+    <td>Solo si tú eliges compartirlo con otra app</td>
   </tr>
   <tr>
-    <td>PDF exportado del perfil</td>
-    <td>Generar un documento descargable con tu perfil para guardar o compartir por tu cuenta</td>
-    <td>Carpeta de caché temporal de la app, hasta que lo compartís o la app la limpia</td>
-    <td>No, salvo que vos mismo elijas compartirlo (por ejemplo, por email) usando el selector nativo de Android</td>
+    <td>Contadores de uso (consultas del día, PDF exportados, anuncios vistos, pedido de calificación)</td>
+    <td>Aplicar los límites del plan gratuito y no repetir avisos</td>
+    <td>Solo en tu dispositivo</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>Meditación guiada</td>
+    <td>La voz se genera con el sintetizador de voz de tu teléfono y los tonos se generan en la app</td>
+    <td>—</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>Identificadores del dispositivo, dirección IP, interacciones con los anuncios y datos de diagnóstico</td>
+    <td>Publicidad (anuncios recompensados), medición y prevención de fraude</td>
+    <td>Los procesa Google AdMob</td>
+    <td>Sí: ver la sección 5</td>
+  </tr>
+  <tr>
+    <td>Compra de Oráculo Pro</td>
+    <td>Desbloquear las funciones Pro</td>
+    <td>La gestiona Google Play; la app solo consulta si la compra existe</td>
+    <td>El pago lo procesa Google Play (sección 5). Nunca vemos los datos de tu tarjeta</td>
   </tr>
 </table>
 
-<h2>3. Base legal (RGPD)</h2>
-<ul>
-  <li><strong>Consentimiento:</strong> el uso de la ubicación GPS y la consulta al Oráculo IA requieren tu acción explícita (tocar un botón) cada vez.</li>
-  <li><strong>Ejecución de un contrato/prestación del servicio:</strong> los datos de nacimiento que ingresás son necesarios para prestar el servicio principal de la app (el cálculo numerológico).</li>
-  <li><strong>Interés legítimo:</strong> el registro local de qué perfiles exportaste a PDF o cuántas consultas gratuitas usaste hoy, para aplicar correctamente los límites del plan gratuito.</li>
-</ul>
-
-<h2>4. Publicidad</h2>
-<p>Oráculo Pitagórico no muestra anuncios ni utiliza redes publicitarias. Esta sección no aplica.</p>
-
-<h2>5. Servicios de terceros</h2>
-
+<h2>3. Oráculo con inteligencia artificial (Google Gemini)</h2>
 <div class="provider">
   <strong>Google Gemini API (Google LLC)</strong>
-  Genera el texto de las lecturas del Oráculo IA. Le enviamos tu nombre y los datos numerológicos/astrológicos ya calculados (no tu fecha de nacimiento en sí) para producir una respuesta personalizada. Google procesa esta información según su propia política de privacidad: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.
+  Cuando consultas el Oráculo, la app envía a la API de Gemini tu nombre y datos calculados de tu perfil (camino de vida, vibración del día, signo zodiacal y fase lunar de tu nacimiento) para generar un mensaje personalizado. No se envían tu fecha de nacimiento completa ni tu ciudad.<br>
+  Según las condiciones de Google para la API de Gemini, Google puede usar el contenido enviado y las respuestas para prestar, mejorar y desarrollar sus productos, y revisores humanos pueden leerlos. Si no quieres que estos datos se envíen, no uses la función del Oráculo: el resto de la app funciona sin ella.<br>
+  Política de Google: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a> · Condiciones: <a href="https://ai.google.dev/gemini-api/terms">ai.google.dev/gemini-api/terms</a>
 </div>
 
+<h2>4. Otros servicios que reciben datos</h2>
 <div class="provider">
   <strong>Open-Meteo</strong>
-  Servicio gratuito y sin fines de lucro usado para dos funciones: (a) convertir el nombre de una ciudad en coordenadas geográficas al usar el botón de ubicación, y (b) consultar el clima histórico aproximado del día y lugar de tu nacimiento. No requiere ni recibe tu nombre ni ningún identificador personal, solo ciudad/coordenadas y fecha. Política: <a href="https://open-meteo.com/en/terms" target="_blank" rel="noopener">open-meteo.com/en/terms</a>.
+  (a) Mientras escribes tu ciudad de nacimiento, el texto se envía para sugerir ciudades. (b) Al calcular un perfil, se envían la ciudad, sus coordenadas y la fecha y hora de nacimiento para mostrar el clima aproximado de ese momento. No se envía tu nombre. <a href="https://open-meteo.com/en/terms">open-meteo.com/en/terms</a>
 </div>
-
 <div class="provider">
-  <strong>Wikimedia / Wikipedia REST API</strong>
-  Se consulta para mostrar un acontecimiento histórico ocurrido en la misma fecha (día y mes) de tu nacimiento. Solo se envía la fecha, sin ningún dato personal. Política: <a href="https://foundation.wikimedia.org/wiki/Policy:Privacy_policy" target="_blank" rel="noopener">foundation.wikimedia.org/wiki/Policy:Privacy_policy</a>.
+  <strong>Wikipedia / Wikimedia</strong>
+  Para mostrar un acontecimiento histórico del día de tu nacimiento se envían solo el día y el mes. <a href="https://foundation.wikimedia.org/wiki/Policy:Privacy_policy">Política de privacidad de Wikimedia</a>
 </div>
-
 <div class="provider">
-  <strong>Google Play Billing</strong>
-  Gestiona las suscripciones pagas de la app. Todos los datos de pago (tarjeta, facturación) los procesa Google directamente — la app nunca los recibe ni los almacena. Política: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.
+  <strong>Geocodificador de Android y OpenStreetMap (Nominatim)</strong>
+  Si tocas el botón de ubicación, las coordenadas del dispositivo se convierten en un nombre de ciudad con el servicio de geocodificación del sistema Android (que puede consultar servidores de Google). Si ese servicio falla, las coordenadas se envían a Nominatim de OpenStreetMap. <a href="https://osmfoundation.org/wiki/Privacy_Policy">Política de privacidad de OpenStreetMap</a>
+</div>
+<div class="provider">
+  <strong>GitHub Pages</strong>
+  Al abrir la app se consulta un archivo público para saber si hay una actualización obligatoria. No se envían datos personales; como en cualquier conexión a internet, el servidor recibe tu dirección IP.
 </div>
 
-<p>Oráculo Pitagórico <strong>no</strong> utiliza redes de publicidad, herramientas de analítica de terceros, ni servicios de rastreo o huella digital.</p>
+<h2>5. Publicidad y compras (Google)</h2>
+<div class="provider">
+  <strong>Google AdMob y User Messaging Platform</strong>
+  La app muestra anuncios recompensados de Google AdMob cuando eliges ver un anuncio para obtener una consulta extra. El SDK de AdMob recoge y comparte con Google datos como el ID de publicidad y otros identificadores del dispositivo, la dirección IP (para estimar una ubicación aproximada), interacciones con los anuncios y datos de diagnóstico, con fines de publicidad, medición y prevención de fraude. Donde la normativa lo exige (por ejemplo, en el Espacio Económico Europeo y el Reino Unido), la app te pide el consentimiento al abrirse. El SDK también puede usar las API de Privacy Sandbox de Android (Topics y Attribution) para medir y mostrar anuncios.<br>
+  Puedes restablecer o eliminar tu ID de publicidad en los ajustes de Google de tu dispositivo. Más información: <a href="https://policies.google.com/technologies/ads">policies.google.com/technologies/ads</a>
+</div>
+<div class="provider">
+  <strong>Google Play (compras y calificaciones)</strong>
+  Oráculo Pro es un pago único procesado por Google Play. La app no recibe tus datos de pago; solo consulta a Google Play si compraste Pro. La app también puede mostrar el cuadro de calificación de Google Play; la calificación la gestiona Google y la app no ve lo que respondes. <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>
+</div>
 
-<h2>6. Transferencias internacionales de datos</h2>
-<p>Los servicios mencionados en la sección 5 (Google, Open-Meteo, Wikimedia) pueden procesar datos en servidores ubicados fuera de tu país, incluyendo Estados Unidos. Estas transferencias están amparadas por las Cláusulas Contractuales Tipo (Standard Contractual Clauses) y/o los mecanismos de adecuación reconocidos por la Comisión Europea, según corresponda a cada proveedor.</p>
+<h2>6. Reportes y contacto por correo</h2>
+<p>Si tocas "Reportar respuesta", la app abre tu aplicación de correo con un mensaje dirigido a nosotros que incluye el texto de la respuesta del Oráculo. Solo se envía si tú lo mandas; en ese caso recibimos tu dirección de correo y el contenido del mensaje, que usamos únicamente para revisar el reporte y responderte.</p>
 
-<h2>7. Retención de datos</h2>
+<h2>7. Base legal (RGPD)</h2>
+<ul>
+  <li><strong>Consentimiento:</strong> uso de la ubicación, consulta al Oráculo y, donde aplique, anuncios personalizados.</li>
+  <li><strong>Prestación del servicio:</strong> los datos de nacimiento que ingresas son necesarios para el cálculo numerológico y la compra de Pro.</li>
+  <li><strong>Interés legítimo:</strong> contadores locales de uso para aplicar los límites del plan gratuito, prevención de fraude en anuncios y atención de reportes.</li>
+</ul>
+
+<h2>8. Seguridad y transferencias internacionales</h2>
+<p>Las conexiones a los servicios mencionados usan cifrado HTTPS/TLS. Los datos de tu perfil se guardan en el almacenamiento privado de la app en tu dispositivo. Si tienes activada la copia de seguridad de Android, el sistema puede incluir esos datos en tu copia de seguridad de Google.</p>
+<p>Google, Open-Meteo, Wikimedia, OpenStreetMap y GitHub pueden procesar datos en servidores fuera de tu país, incluido Estados Unidos, con las garantías que cada proveedor aplica (por ejemplo, cláusulas contractuales tipo).</p>
+
+<h2>9. Conservación y eliminación</h2>
 <table>
-  <tr><th>Dato</th><th>Tiempo de retención</th></tr>
-  <tr><td>Perfiles guardados, historial del Oráculo, resultado de Grafología</td><td>Hasta que borrés el perfil manualmente o desinstales la app</td></tr>
-  <tr><td>Contador de consultas gratuitas diarias / PDFs exportados</td><td>Se reinicia diariamente (Oráculo) o se conserva mientras el perfil exista (PDF)</td></tr>
-  <tr><td>Ubicación GPS</td><td>No se retiene; se descarta inmediatamente después de resolver la ciudad</td></tr>
-  <tr><td>Trazos de escritura (Grafología)</td><td>No se retienen en ningún momento, ni siquiera temporalmente en disco</td></tr>
+  <tr><th>Dato</th><th>Cuánto tiempo se conserva</th></tr>
+  <tr><td>Perfiles guardados</td><td>Hasta que los borres desde la app o desinstales la app</td></tr>
+  <tr><td>Historial del Oráculo, resultados de grafología y contadores de uso</td><td>Hasta que borres los datos de la app (Ajustes de Android → Apps → Oráculo Pitagórico → Almacenamiento → Borrar datos) o la desinstales</td></tr>
+  <tr><td>Ubicación del dispositivo y trazos de escritura</td><td>No se conservan</td></tr>
+  <tr><td>Datos enviados a Google, Open-Meteo, Wikimedia u OpenStreetMap</td><td>Según las políticas de cada proveedor. Nosotros no los guardamos</td></tr>
+  <tr><td>Correos de reporte</td><td>El tiempo necesario para atender el reporte</td></tr>
 </table>
 
-<h2>8. Tus derechos</h2>
+<h2>10. Tus derechos y opciones</h2>
+<ul>
+  <li>Puedes ver y borrar tus perfiles desde la app. Para corregir un dato, carga el perfil, ajústalo y vuelve a calcular: se guarda como un perfil nuevo y puedes borrar el anterior.</li>
+  <li>Puedes no conceder el permiso de ubicación y escribir la ciudad a mano.</li>
+  <li>Puedes no usar el Oráculo ni ver anuncios; el resto de la app sigue disponible.</li>
+  <li>Puedes cambiar tu consentimiento de publicidad (donde aplique) y restablecer tu ID de publicidad desde los ajustes de tu dispositivo.</li>
+  <li>Para ejercer tus derechos o hacer consultas sobre tus datos, escríbenos a la dirección de la sección 13. También puedes presentar un reclamo ante la autoridad de protección de datos de tu país.</li>
+</ul>
+
+<h2>11. Edad mínima</h2>
+<p>Oráculo Pitagórico está dirigida a personas mayores de 18 años. No está diseñada para menores ni recopilamos deliberadamente datos de menores. Si crees que un menor nos envió datos, escríbenos para eliminarlos.</p>
+
+<h2>12. Cambios en esta política</h2>
+<p>Podemos actualizar esta política cuando cambie la app o la normativa. La fecha de "Última actualización" indica la versión vigente.</p>
+
+<h2>13. Contacto</h2>
+<p>Responsable: Vectrix Labs<br>
+Correo: <a href="mailto:vectrixlabs@gmail.com">vectrixlabs@gmail.com</a></p>
+</section>
+
+<hr>
+
+<section id="en" lang="en">
+<h1>Privacy Policy</h1>
+<p class="meta">Vectrix Labs — "Oráculo Pitagórico" app (Android, com.quantixlabs.oraculo)<br>
+Last updated: September 17, 2026</p>
+
+<h2>1. Introduction</h2>
+<p>Vectrix Labs ("we") develops Oráculo Pitagórico (Pythagorean Oracle), an entertainment app for Pythagorean numerology, symbolic astrology, a daily card, guided meditation and an "Oracle" whose messages are generated with artificial intelligence. This policy explains what data the app processes, why, who it is shared with and what choices you have, in line with the General Data Protection Regulation (GDPR) and applicable data protection laws.</p>
+<p>The app requires no sign-up or user account, and we do not run servers that store your data. We do not sell your personal data.</p>
+<p>The app's content, including Oracle messages, is symbolic entertainment and is not medical, psychological, financial or legal advice.</p>
+
+<h2>2. Data the app processes</h2>
 <table>
-  <tr><th>Derecho</th><th>Cómo ejercerlo</th></tr>
-  <tr><td>Acceso y portabilidad</td><td>Todos tus datos están en tu propio dispositivo; podés verlos directamente en la app</td></tr>
-  <tr><td>Corrección</td><td>Editá el perfil guardado desde la app en cualquier momento</td></tr>
-  <tr><td>Eliminación</td><td>Borrá el perfil desde la app, o desinstalá la app para eliminar todos los datos locales</td></tr>
-  <tr><td>Oposición / retiro del consentimiento</td><td>No otorgues el permiso de ubicación, o simplemente no uses la función del Oráculo IA</td></tr>
+  <tr><th>Data</th><th>Purpose</th><th>Where it is stored</th><th>Does it leave the device?</th></tr>
+  <tr><td>Name, date and time of birth and birth city that you enter</td><td>Calculate your numerology and astrology profile, daily card, compatibility and PDF</td><td>Only on your device</td><td>Partly: see sections 3 (Oracle) and 4 (historical weather, historical events and cities)</td></tr>
+  <tr><td>Another person's data in the Compatibility feature (name, date and time of birth, city)</td><td>Calculate compatibility. Enter it only with that person's permission</td><td>On your device</td><td>Only the city text, to suggest cities (Open-Meteo, section 4)</td></tr>
+  <tr><td>Device location, approximate or precise (optional)</td><td>Fill in the city when you tap the location button. Used only if you grant location permission</td><td>Not stored</td><td>It may: see section 4</td></tr>
+  <tr><td>Oracle messages received</td><td>Show your consultation history per profile</td><td>Only on your device</td><td>No, unless you choose to report a response (section 6)</td></tr>
+  <tr><td>Handwriting strokes (graphology feature)</td><td>Calculate symbolic handwriting traits</td><td>Strokes are not stored; only the text result is</td><td>No</td></tr>
+  <tr><td>Profile PDF</td><td>Generate a document for you to save or share</td><td>App's temporary folder</td><td>Only if you choose to share it with another app</td></tr>
+  <tr><td>Usage counters (daily consultations, PDF exports, ads watched, rating prompt)</td><td>Apply free-plan limits and avoid repeating prompts</td><td>Only on your device</td><td>No</td></tr>
+  <tr><td>Guided meditation</td><td>The voice is produced by your phone's text-to-speech engine and tones are generated in the app</td><td>—</td><td>No</td></tr>
+  <tr><td>Device identifiers, IP address, ad interactions and diagnostics</td><td>Advertising (rewarded ads), measurement and fraud prevention</td><td>Processed by Google AdMob</td><td>Yes: see section 5</td></tr>
+  <tr><td>Oráculo Pro purchase</td><td>Unlock Pro features</td><td>Managed by Google Play; the app only checks whether the purchase exists</td><td>Payment is processed by Google Play (section 5). We never see your card details</td></tr>
 </table>
-<p>Para cualquier consulta adicional sobre tus derechos, escribinos a la dirección de contacto indicada en la sección 11.</p>
 
-<h2>9. Protección de menores</h2>
-<p>Oráculo Pitagórico es una app de entretenimiento no dirigida específicamente a menores de 13 años. No recolectamos deliberadamente datos de menores. Si sos padre, madre o tutor y creés que un menor a tu cargo nos proporcionó datos personales, contactanos para eliminarlos.</p>
+<h2>3. AI Oracle (Google Gemini)</h2>
+<div class="provider">
+  <strong>Google Gemini API (Google LLC)</strong>
+  When you consult the Oracle, the app sends your name and values calculated from your profile (life path, daily vibration, zodiac sign and moon phase at birth) to the Gemini API to generate a personalized message. Your full birth date and city are not sent.<br>
+  Under Google's Gemini API terms, Google may use submitted content and responses to provide, improve and develop its products, and human reviewers may read them. If you do not want this data sent, do not use the Oracle feature; the rest of the app works without it.<br>
+  Google Privacy Policy: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a> · Terms: <a href="https://ai.google.dev/gemini-api/terms">ai.google.dev/gemini-api/terms</a>
+</div>
 
-<h2>10. Cambios a esta política</h2>
-<p>Podemos actualizar esta política ocasionalmente para reflejar cambios en la app o en la normativa aplicable. La fecha de "última actualización" en la parte superior indica la versión vigente. Te recomendamos revisarla periódicamente.</p>
+<h2>4. Other services that receive data</h2>
+<div class="provider"><strong>Open-Meteo</strong>(a) While you type your birth city, the text is sent to suggest cities. (b) When a profile is calculated, the city, its coordinates and your birth date and time are sent to show the approximate weather at that moment. Your name is not sent. <a href="https://open-meteo.com/en/terms">open-meteo.com/en/terms</a></div>
+<div class="provider"><strong>Wikipedia / Wikimedia</strong>To show a historical event from your birthday, only the day and month are sent. <a href="https://foundation.wikimedia.org/wiki/Policy:Privacy_policy">Wikimedia Privacy Policy</a></div>
+<div class="provider"><strong>Android geocoder and OpenStreetMap (Nominatim)</strong>If you tap the location button, your device coordinates are turned into a city name by the Android system geocoding service (which may contact Google servers). If that fails, the coordinates are sent to OpenStreetMap's Nominatim. <a href="https://osmfoundation.org/wiki/Privacy_Policy">OpenStreetMap Privacy Policy</a></div>
+<div class="provider"><strong>GitHub Pages</strong>When the app opens it checks a public file to see whether a mandatory update is required. No personal data is sent; as with any internet connection, the server receives your IP address.</div>
 
-<h2>11. Contacto y reclamos</h2>
-<p>Responsable: Quantix Labs<br>
-Correo de contacto: <a href="mailto:rodox1970@gmail.com">rodox1970@gmail.com</a></p>
-<p>Nos comprometemos a responder tu consulta dentro de un plazo razonable. Si considerás que no hemos resuelto tu inquietud, tenés derecho a presentar un reclamo ante la autoridad de protección de datos que corresponda a tu país de residencia.</p>
+<h2>5. Advertising and purchases (Google)</h2>
+<div class="provider">
+  <strong>Google AdMob and User Messaging Platform</strong>
+  The app shows Google AdMob rewarded ads when you choose to watch an ad for an extra consultation. The AdMob SDK collects and shares with Google data such as the advertising ID and other device identifiers, IP address (to estimate approximate location), ad interactions and diagnostics, for advertising, measurement and fraud prevention. Where required by law (for example, in the European Economic Area and the United Kingdom), the app asks for your consent when it opens. The SDK may also use Android's Privacy Sandbox APIs (Topics and Attribution) to measure and show ads.<br>
+  You can reset or delete your advertising ID in your device's Google settings. More information: <a href="https://policies.google.com/technologies/ads">policies.google.com/technologies/ads</a>
+</div>
+<div class="provider">
+  <strong>Google Play (purchases and ratings)</strong>
+  Oráculo Pro is a one-time payment processed by Google Play. The app does not receive your payment details; it only asks Google Play whether you bought Pro. The app may also show the Google Play rating dialog; ratings are handled by Google and the app cannot see your answer. <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>
+</div>
+
+<h2>6. Reports and email contact</h2>
+<p>If you tap "Report response", the app opens your email app with a message addressed to us that includes the text of the Oracle response. It is only sent if you send it; in that case we receive your email address and the message content, which we use only to review the report and reply.</p>
+
+<h2>7. Legal basis (GDPR)</h2>
+<ul>
+  <li><strong>Consent:</strong> use of location, Oracle consultations and, where applicable, personalized ads.</li>
+  <li><strong>Performance of the service:</strong> the birth data you enter is needed for the numerology calculation and the Pro purchase.</li>
+  <li><strong>Legitimate interest:</strong> local usage counters to apply free-plan limits, ad fraud prevention and handling reports.</li>
+</ul>
+
+<h2>8. Security and international transfers</h2>
+<p>Connections to the services above use HTTPS/TLS encryption. Your profile data is stored in the app's private storage on your device. If Android backup is enabled, the system may include this data in your Google backup.</p>
+<p>Google, Open-Meteo, Wikimedia, OpenStreetMap and GitHub may process data on servers outside your country, including the United States, under the safeguards each provider applies (for example, standard contractual clauses).</p>
+
+<h2>9. Retention and deletion</h2>
+<table>
+  <tr><th>Data</th><th>Retention</th></tr>
+  <tr><td>Saved profiles</td><td>Until you delete them in the app or uninstall the app</td></tr>
+  <tr><td>Oracle history, graphology results and usage counters</td><td>Until you clear the app's data (Android Settings → Apps → Oráculo Pitagórico → Storage → Clear data) or uninstall it</td></tr>
+  <tr><td>Device location and handwriting strokes</td><td>Not retained</td></tr>
+  <tr><td>Data sent to Google, Open-Meteo, Wikimedia or OpenStreetMap</td><td>According to each provider's policy. We do not store it</td></tr>
+  <tr><td>Report emails</td><td>As long as needed to handle the report</td></tr>
+</table>
+
+<h2>10. Your rights and choices</h2>
+<ul>
+  <li>You can view and delete your profiles in the app. To correct a detail, load the profile, adjust it and recalculate: it is saved as a new profile and you can delete the old one.</li>
+  <li>You can decline location permission and type the city manually.</li>
+  <li>You can choose not to use the Oracle or watch ads; the rest of the app remains available.</li>
+  <li>You can change your advertising consent (where applicable) and reset your advertising ID in your device settings.</li>
+  <li>To exercise your rights or ask about your data, email us at the address in section 13. You may also lodge a complaint with your local data protection authority.</li>
+</ul>
+
+<h2>11. Minimum age</h2>
+<p>Oráculo Pitagórico is intended for people aged 18 and over. It is not designed for minors and we do not knowingly collect data from minors. If you believe a minor has sent us data, contact us so we can delete it.</p>
+
+<h2>12. Changes to this policy</h2>
+<p>We may update this policy when the app or the law changes. The "Last updated" date shows the current version.</p>
+
+<h2>13. Contact</h2>
+<p>Controller: Vectrix Labs<br>
+Email: <a href="mailto:vectrixlabs@gmail.com">vectrixlabs@gmail.com</a></p>
+</section>
 
 </body>
 </html>
