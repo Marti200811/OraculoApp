@@ -36,7 +36,7 @@
 <section id="es">
 <h1>Política de Privacidad</h1>
 <p class="meta">Vectrix Labs — App "Oráculo Pitagórico" (Android, com.quantixlabs.oraculo)<br>
-Última actualización: 17 de septiembre de 2026</p>
+Última actualización: 26 de octubre de 2026</p>
 
 <h2>1. Introducción</h2>
 <p>Vectrix Labs ("nosotros") desarrolla Oráculo Pitagórico, una app de entretenimiento de numerología pitagórica, astrología simbólica, carta diaria, meditación guiada y un "Oráculo" cuyos mensajes se generan con inteligencia artificial. Esta política explica qué datos procesa la app, con qué fin, con quién se comparten y qué opciones tienes, en línea con el Reglamento General de Protección de Datos (RGPD) y las leyes de protección de datos aplicables.</p>
@@ -96,8 +96,8 @@
   </tr>
   <tr>
     <td>Identificadores del dispositivo, dirección IP, interacciones con los anuncios y datos de diagnóstico</td>
-    <td>Publicidad (anuncios recompensados), medición y prevención de fraude</td>
-    <td>Los procesa Google AdMob</td>
+    <td>Publicidad (banner y anuncios recompensados), medición de uso y prevención de fraude</td>
+    <td>Los procesan Google AdMob y Firebase Analytics</td>
     <td>Sí: ver la sección 5</td>
   </tr>
   <tr>
@@ -108,12 +108,13 @@
   </tr>
 </table>
 
-<h2>3. Oráculo con inteligencia artificial (Google Gemini)</h2>
+<h2>3. Oráculo con inteligencia artificial (Google Gemini vía Firebase)</h2>
 <div class="provider">
-  <strong>Google Gemini API (Google LLC)</strong>
-  Cuando consultas el Oráculo, la app envía a la API de Gemini tu nombre y datos calculados de tu perfil (camino de vida, vibración del día, signo zodiacal y fase lunar de tu nacimiento) para generar un mensaje personalizado. No se envían tu fecha de nacimiento completa ni tu ciudad.<br>
-  Según las condiciones de Google para la API de Gemini, Google puede usar el contenido enviado y las respuestas para prestar, mejorar y desarrollar sus productos, y revisores humanos pueden leerlos. Si no quieres que estos datos se envíen, no uses la función del Oráculo: el resto de la app funciona sin ella.<br>
-  Política de Google: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a> · Condiciones: <a href="https://ai.google.dev/gemini-api/terms">ai.google.dev/gemini-api/terms</a>
+  <strong>Firebase AI Logic y Google Gemini (Google LLC)</strong>
+  Cuando consultas el Oráculo, la app envía tu nombre y los datos calculados de tu perfil (camino de vida, vibración del día, signo zodiacal y fase lunar de tu nacimiento) a los modelos Gemini de Google, a través de Firebase AI Logic, para generar un mensaje personalizado. No se envían tu fecha de nacimiento completa ni tu ciudad.<br>
+  Google puede procesar ese contenido y las respuestas conforme a las condiciones de estos servicios, incluida la posibilidad de revisión humana. Si no quieres que estos datos se envíen, no uses la función del Oráculo: el resto de la app funciona sin ella.<br>
+  Para comprobar que las peticiones provienen de una copia legítima de la app, Firebase App Check utiliza Google Play Integrity, que recibe identificadores del dispositivo y de la aplicación. No se le envían los datos de tu perfil.<br>
+  Política de Google: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a> · Condiciones de Firebase: <a href="https://firebase.google.com/terms">firebase.google.com/terms</a>
 </div>
 
 <h2>4. Otros servicios que reciben datos</h2>
@@ -134,11 +135,17 @@
   Al abrir la app se consulta un archivo público para saber si hay una actualización obligatoria. No se envían datos personales; como en cualquier conexión a internet, el servidor recibe tu dirección IP.
 </div>
 
-<h2>5. Publicidad y compras (Google)</h2>
+<h2>5. Publicidad, medición y compras (Google)</h2>
 <div class="provider">
   <strong>Google AdMob y User Messaging Platform</strong>
-  La app muestra anuncios recompensados de Google AdMob cuando eliges ver un anuncio para obtener una consulta extra. El SDK de AdMob recoge y comparte con Google datos como el ID de publicidad y otros identificadores del dispositivo, la dirección IP (para estimar una ubicación aproximada), interacciones con los anuncios y datos de diagnóstico, con fines de publicidad, medición y prevención de fraude. Donde la normativa lo exige (por ejemplo, en el Espacio Económico Europeo y el Reino Unido), la app te pide el consentimiento al abrirse. El SDK también puede usar las API de Privacy Sandbox de Android (Topics y Attribution) para medir y mostrar anuncios.<br>
+  La app muestra anuncios de Google AdMob de dos formas: un <strong>banner fijo al pie de la pantalla</strong>, que se ve mientras no hayas comprado Oráculo Pro, y <strong>anuncios recompensados</strong>, que aparecen solo cuando eliges verlos para obtener una consulta extra del Oráculo o la exportación del PDF. El SDK de AdMob recoge y comparte con Google datos como el ID de publicidad y otros identificadores del dispositivo, la dirección IP (para estimar una ubicación aproximada), interacciones con los anuncios y datos de diagnóstico, con fines de publicidad, medición y prevención de fraude. Donde la normativa lo exige (por ejemplo, en el Espacio Económico Europeo y el Reino Unido), la app te pide el consentimiento al abrirse. El SDK también puede usar las API de Privacy Sandbox de Android (Topics y Attribution) para medir y mostrar anuncios.<br>
   Puedes restablecer o eliminar tu ID de publicidad en los ajustes de Google de tu dispositivo. Más información: <a href="https://policies.google.com/technologies/ads">policies.google.com/technologies/ads</a>
+</div>
+<div class="provider">
+  <strong>Firebase Analytics</strong>
+  Para saber cuánta gente usa la app, cuánto dura una sesión y si vuelve al día siguiente, usamos Firebase Analytics, que registra eventos de uso junto con un identificador de la instalación, el modelo del dispositivo y el país aproximado. No registramos los datos de tu perfil, ni tu nombre, ni las respuestas del Oráculo.<br>
+  La recolección está <strong>apagada por defecto</strong> y solo se enciende con el mismo consentimiento de publicidad descrito arriba: donde el consentimiento es obligatorio, no se recoge nada hasta que lo aceptas, y si lo retiras se vuelve a apagar. Estas métricas también alimentan los informes de Google AdMob.<br>
+  <a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a>
 </div>
 <div class="provider">
   <strong>Google Play (compras y calificaciones)</strong>
@@ -150,7 +157,7 @@
 
 <h2>7. Base legal (RGPD)</h2>
 <ul>
-  <li><strong>Consentimiento:</strong> uso de la ubicación, consulta al Oráculo y, donde aplique, anuncios personalizados.</li>
+  <li><strong>Consentimiento:</strong> uso de la ubicación, consulta al Oráculo y, donde aplique, anuncios personalizados y medición de uso (Firebase Analytics).</li>
   <li><strong>Prestación del servicio:</strong> los datos de nacimiento que ingresas son necesarios para el cálculo numerológico y la compra de Pro.</li>
   <li><strong>Interés legítimo:</strong> contadores locales de uso para aplicar los límites del plan gratuito, prevención de fraude en anuncios y atención de reportes.</li>
 </ul>
@@ -194,7 +201,7 @@ Correo: <a href="mailto:vectrixlabs@gmail.com">vectrixlabs@gmail.com</a></p>
 <section id="en" lang="en">
 <h1>Privacy Policy</h1>
 <p class="meta">Vectrix Labs — "Oráculo Pitagórico" app (Android, com.quantixlabs.oraculo)<br>
-Last updated: September 17, 2026</p>
+Last updated: October 26, 2026</p>
 
 <h2>1. Introduction</h2>
 <p>Vectrix Labs ("we") develops Oráculo Pitagórico (Pythagorean Oracle), an entertainment app for Pythagorean numerology, symbolic astrology, a daily card, guided meditation and an "Oracle" whose messages are generated with artificial intelligence. This policy explains what data the app processes, why, who it is shared with and what choices you have, in line with the General Data Protection Regulation (GDPR) and applicable data protection laws.</p>
@@ -212,16 +219,17 @@ Last updated: September 17, 2026</p>
   <tr><td>Profile PDF</td><td>Generate a document for you to save or share</td><td>App's temporary folder</td><td>Only if you choose to share it with another app</td></tr>
   <tr><td>Usage counters (daily consultations, PDF exports, ads watched, rating prompt)</td><td>Apply free-plan limits and avoid repeating prompts</td><td>Only on your device</td><td>No</td></tr>
   <tr><td>Guided meditation</td><td>The voice is produced by your phone's text-to-speech engine and tones are generated in the app</td><td>—</td><td>No</td></tr>
-  <tr><td>Device identifiers, IP address, ad interactions and diagnostics</td><td>Advertising (rewarded ads), measurement and fraud prevention</td><td>Processed by Google AdMob</td><td>Yes: see section 5</td></tr>
+  <tr><td>Device identifiers, IP address, ad interactions and diagnostics</td><td>Advertising (banner and rewarded ads), usage measurement and fraud prevention</td><td>Processed by Google AdMob and Firebase Analytics</td><td>Yes: see section 5</td></tr>
   <tr><td>Oráculo Pro purchase</td><td>Unlock Pro features</td><td>Managed by Google Play; the app only checks whether the purchase exists</td><td>Payment is processed by Google Play (section 5). We never see your card details</td></tr>
 </table>
 
-<h2>3. AI Oracle (Google Gemini)</h2>
+<h2>3. AI Oracle (Google Gemini via Firebase)</h2>
 <div class="provider">
-  <strong>Google Gemini API (Google LLC)</strong>
-  When you consult the Oracle, the app sends your name and values calculated from your profile (life path, daily vibration, zodiac sign and moon phase at birth) to the Gemini API to generate a personalized message. Your full birth date and city are not sent.<br>
-  Under Google's Gemini API terms, Google may use submitted content and responses to provide, improve and develop its products, and human reviewers may read them. If you do not want this data sent, do not use the Oracle feature; the rest of the app works without it.<br>
-  Google Privacy Policy: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a> · Terms: <a href="https://ai.google.dev/gemini-api/terms">ai.google.dev/gemini-api/terms</a>
+  <strong>Firebase AI Logic and Google Gemini (Google LLC)</strong>
+  When you consult the Oracle, the app sends your name and values calculated from your profile (life path, daily vibration, zodiac sign and moon phase at birth) to Google's Gemini models through Firebase AI Logic, to generate a personalized message. Your full birth date and city are not sent.<br>
+  Google may process that content and the responses under the terms of these services, including the possibility of human review. If you do not want this data sent, do not use the Oracle feature; the rest of the app works without it.<br>
+  To check that requests come from a genuine copy of the app, Firebase App Check uses Google Play Integrity, which receives device and app identifiers. Your profile data is not sent to it.<br>
+  Google Privacy Policy: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a> · Firebase Terms: <a href="https://firebase.google.com/terms">firebase.google.com/terms</a>
 </div>
 
 <h2>4. Other services that receive data</h2>
@@ -230,11 +238,17 @@ Last updated: September 17, 2026</p>
 <div class="provider"><strong>Android geocoder and OpenStreetMap (Nominatim)</strong>If you tap the location button, your device coordinates are turned into a city name by the Android system geocoding service (which may contact Google servers). If that fails, the coordinates are sent to OpenStreetMap's Nominatim. <a href="https://osmfoundation.org/wiki/Privacy_Policy">OpenStreetMap Privacy Policy</a></div>
 <div class="provider"><strong>GitHub Pages</strong>When the app opens it checks a public file to see whether a mandatory update is required. No personal data is sent; as with any internet connection, the server receives your IP address.</div>
 
-<h2>5. Advertising and purchases (Google)</h2>
+<h2>5. Advertising, measurement and purchases (Google)</h2>
 <div class="provider">
   <strong>Google AdMob and User Messaging Platform</strong>
-  The app shows Google AdMob rewarded ads when you choose to watch an ad for an extra consultation. The AdMob SDK collects and shares with Google data such as the advertising ID and other device identifiers, IP address (to estimate approximate location), ad interactions and diagnostics, for advertising, measurement and fraud prevention. Where required by law (for example, in the European Economic Area and the United Kingdom), the app asks for your consent when it opens. The SDK may also use Android's Privacy Sandbox APIs (Topics and Attribution) to measure and show ads.<br>
+  The app shows Google AdMob ads in two ways: a <strong>fixed banner at the bottom of the screen</strong>, shown while you have not bought Oráculo Pro, and <strong>rewarded ads</strong>, which appear only when you choose to watch one to get an extra Oracle consultation or the PDF export. The AdMob SDK collects and shares with Google data such as the advertising ID and other device identifiers, IP address (to estimate approximate location), ad interactions and diagnostics, for advertising, measurement and fraud prevention. Where required by law (for example, in the European Economic Area and the United Kingdom), the app asks for your consent when it opens. The SDK may also use Android's Privacy Sandbox APIs (Topics and Attribution) to measure and show ads.<br>
   You can reset or delete your advertising ID in your device's Google settings. More information: <a href="https://policies.google.com/technologies/ads">policies.google.com/technologies/ads</a>
+</div>
+<div class="provider">
+  <strong>Firebase Analytics</strong>
+  To understand how many people use the app, how long a session lasts and whether they come back the next day, we use Firebase Analytics, which records usage events together with an installation identifier, the device model and the approximate country. We do not record your profile data, your name or the Oracle's responses.<br>
+  Collection is <strong>off by default</strong> and is switched on only with the same advertising consent described above: where consent is required, nothing is collected until you accept, and if you withdraw it, collection is switched off again. These metrics also feed Google AdMob's reports.<br>
+  <a href="https://firebase.google.com/support/privacy">firebase.google.com/support/privacy</a>
 </div>
 <div class="provider">
   <strong>Google Play (purchases and ratings)</strong>
@@ -246,7 +260,7 @@ Last updated: September 17, 2026</p>
 
 <h2>7. Legal basis (GDPR)</h2>
 <ul>
-  <li><strong>Consent:</strong> use of location, Oracle consultations and, where applicable, personalized ads.</li>
+  <li><strong>Consent:</strong> use of location, Oracle consultations and, where applicable, personalized ads and usage measurement (Firebase Analytics).</li>
   <li><strong>Performance of the service:</strong> the birth data you enter is needed for the numerology calculation and the Pro purchase.</li>
   <li><strong>Legitimate interest:</strong> local usage counters to apply free-plan limits, ad fraud prevention and handling reports.</li>
 </ul>
